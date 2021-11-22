@@ -1,0 +1,58 @@
+<div class="position-relative w-100 h-100">
+    
+    <mgl-map
+    [style]="'mapbox://styles/mapbox/streets-v9'"
+    [zoom]="[2]"
+    [center]="map.center"
+    (load)="loadMap($event)"
+    >
+        <!-- <div *ngIf="continent">
+                <mgl-marker *ngFor="let country of continent.countries"
+                    
+                    [lngLat]="getLatLng(country)"
+                    color="red"
+                >
+                </mgl-marker>
+            
+        </div> -->
+        
+    </mgl-map>
+    
+    <div class="position-absolute p-2" style="top: 0;right: 0;width:20%;height: 100%;">
+
+        <div class="h-100 d-flex bd-highlight flex-column">
+            <div class="bd-highlight w-100">
+                <select [(ngModel)]="form.field.selection_continent" id="" class="form-control" (change)="chooseContinent()">
+                    <option *ngFor="let option of form.options.selection_continent" [value]="option">{{option}}</option>
+                </select>
+        
+                <select [(ngModel)]="form.field.selection_type" id="" class="form-control" (change)="chooseContinent()">
+                    <option *ngFor="let option of form.options.selection_type" [value]="option.value">{{option.text}}</option>
+                </select>
+            </div>
+
+            <div *ngIf="chart.list.length" class="bd-highlight flex-fill w-100">
+                <app-chart-plug [data]="chart.list" [options]="{title: {text: 'Others list '+form.field.selection_type},plotOptions: {bar: {horizontal: true,distributed: true,barHeight: '85%',dataLabels: {
+                    position: 'bottom'
+                  }}}}"></app-chart-plug>
+            </div>
+        </div>
+        
+        
+        <!-- <ul *ngIf="continent">
+            <li *ngFor="let country of continent.countries">{{country}}</li>
+        </ul> -->
+
+    </div>
+    <div *ngIf="false" class="position-absolute bg-danger" style="top: 0;right:0;bottom: 0;">
+        <app-chart-plug></app-chart-plug>
+    </div>
+    <div *ngIf="baseMap && continent" class="position-absolute p-2" style="width:80%;left:0;bottom: 0;">
+        <app-chart-plug [data]="chart.general" [options]="{title: {text: 'Top 10 '+form.field.selection_type},plotOptions: {bar: {horizontal: true,distributed: true,barHeight: '90%',dataLabels: {
+            position: 'bottom'
+          }}}}"></app-chart-plug>
+    </div>
+
+</div>
+
+

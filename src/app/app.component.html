@@ -68,8 +68,8 @@
 
   .content {
     display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
+    /* margin: 82px auto 32px; */
+    /* padding: 0 16px; */
     max-width: 960px;
     flex-direction: column;
     align-items: center;
@@ -303,7 +303,7 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<!-- <div class="toolbar" role="banner">
   <img
     width="40"
     alt="Angular Logo"
@@ -323,11 +323,11 @@
         <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
       </svg>
     </a>
-</div>
+</div> -->
 
-<div class="content" role="main">
-
-  <!-- Highlight Card -->
+<div class="content-fluid" role="main">
+<!-- 
+  Highlight Card
   <div class="card highlight-card card-small">
 
     <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
@@ -350,7 +350,6 @@
 
   </div>
 
-  <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
 
@@ -386,7 +385,6 @@
 
   </div>
 
-  <!-- Next Steps -->
   <h2>Next Steps</h2>
   <p>What do you want to do next with your app?</p>
 
@@ -422,20 +420,21 @@
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>Build for Production</span>
     </button>
-  </div>
+  </div> -->
+
+  <app-covid></app-covid>
 
   <!-- Terminal -->
-  <div class="terminal" [ngSwitch]="selection.value">
+  <!-- <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
       <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
       <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
       <pre *ngSwitchCase="'dependency'">ng add _____</pre>
       <pre *ngSwitchCase="'test'">ng test</pre>
       <pre *ngSwitchCase="'build'">ng build</pre>
-  </div>
+  </div> -->
 
-  <!-- Links -->
-  <div class="card-container">
+  <!-- <div class="card-container">
     <a class="circle-link" title="Find a Local Meetup" href="https://www.meetup.com/find/?keywords=angular" target="_blank" rel="noopener">
       <svg xmlns="http://www.w3.org/2000/svg" width="24.607" height="23.447" viewBox="0 0 24.607 23.447">
         <title>Meetup Logo</title>
@@ -452,7 +451,6 @@
     </a>
   </div>
 
-  <!-- Footer -->
   <footer>
       Love Angular?&nbsp;
       <a href="https://github.com/angular/angular" target="_blank" rel="noopener"> Give our repo a star.
@@ -464,7 +462,7 @@
       <a href="https://github.com/angular/angular" target="_blank" rel="noopener">
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2"/><path d="M0 0h24v24H0z" fill="none"/></svg>
       </a>
-  </footer>
+  </footer> -->
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
     <title>Gray Clouds Background</title>

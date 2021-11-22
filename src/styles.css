@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+}
+
+.bg-trans{
+    background-color: rgba(247, 247, 247, 0.329);
+}
